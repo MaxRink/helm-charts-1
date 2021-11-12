@@ -1,16 +1,75 @@
 apiVersion: v1
 entries:
+  vsphere-cpi:
+  - annotations:
+      category: cpi
+    apiVersion: v2
+    appVersion: v1.21.1
+    created: "2021-11-12T11:07:31.715081979Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Helm chart for the vSphere-CPI
+    digest: affceac2bcd16ea7f7acb94e6409e3f5e63e78e2114fae96c19d885a868ecf95
+    home: https://github.com/kubernetes/cloud-provider-vsphere
+    keywords:
+    - vSphere
+    - CPI
+    maintainers:
+    - email: maximilian.rink@telekom.de
+      name: Maximilian Rink
+    - email: myles@vmware.com
+      name: Myles Gray
+    name: vsphere-cpi
+    urls:
+    - https://github.com/MaxRink/helm-charts-1/releases/download/vsphere-cpi-1.1.2/vsphere-cpi-1.1.2.tgz
+    version: 1.1.2
   vsphere-csi:
   - apiVersion: v2
+    appVersion: 2.3.0
+    created: "2021-11-12T11:07:32.041269387Z"
+    dependencies:
+    - condition: vsphere-cpi.enabled
+      name: vsphere-cpi
+      repository: https://vsphere-tmm.github.io/helm-charts
+      version: 1.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: A Helm chart for vSphere CSI Driver
+    digest: 346a2525efdc9d2dc7485bf5d698bba180478384d3738ae66f45a38ca4dd7f29
+    home: https://github.com/kubernetes-sigs/vsphere-csi-driverhttps://github.com/kubernetes-sigs/vsphere-csi-driver
+    icon: https://raw.githubusercontent.com/kubernetes-sigs/vsphere-csi-driver/master/docs/images/vmware_logo.png
+    keywords:
+    - vsphere
+    - vmware
+    - csi
+    maintainers:
+    - email: maximilian.rink@telekom.de
+      name: Maximilian Rink
+    - email: myles@vmware.com
+      name: Myles Gray
+    name: vsphere-csi
+    sources:
+    - https://github.com/kubernetes-sigs/vsphere-csi-driver
+    urls:
+    - https://github.com/MaxRink/helm-charts-1/releases/download/vsphere-csi-1.2.1/vsphere-csi-1.2.1.tgz
+    version: 1.2.1
+  - apiVersion: v2
     appVersion: 2.0.0
-    created: "2021-02-16T11:07:28.591227Z"
+    created: "2021-11-12T11:07:31.87454386Z"
     dependencies:
     - enabled: true
       name: vsphere-cpi
       repository: https://charts.helm.sh/stable
       version: 0.2.3
     description: A Helm chart for vSphere CSI Driver
-    digest: e96928e90edf1b52116104ad3cb79f33cd5db6bc11323e923bda0a0dc9e4387c
+    digest: d0227e29f46f86d01c2b6a195924eb97e40901ced066ace52b006fb8dc9668de
     home: https://github.com/kubernetes-sigs/vsphere-csi-driver
     icon: https://github.com/kubernetes-sigs/vsphere-csi-driver/blob/master/docs/images/vmware_logo.png
     keywords:
@@ -26,6 +85,6 @@ entries:
     sources:
     - https://github.com/kubernetes-sigs/vsphere-csi-driver
     urls:
-    - https://vsphere-tmm.github.io/helm-charts/charts/vsphere-csi-0.0.4.tgz
+    - https://github.com/MaxRink/helm-charts-1/releases/download/vsphere-csi-0.0.4/vsphere-csi-0.0.4.tgz
     version: 0.0.4
-generated: "2021-02-16T11:07:28.589705Z"
+generated: "2021-11-12T11:07:32.041277388Z"
