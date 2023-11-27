@@ -1,36 +1,9 @@
 apiVersion: v1
 entries:
-  vsphere-cpi:
-  - annotations:
-      category: cpi
-    apiVersion: v2
-    appVersion: v1.25.1
-    created: "2023-11-27T23:25:22.620132234Z"
-    dependencies:
-    - name: common
-      repository: https://charts.bitnami.com/bitnami
-      tags:
-      - bitnami-common
-      version: 1.x.x
-    description: Helm chart for the vSphere-CPI
-    digest: e0f6018daef7966c85910cb30ddf0b7cb986975bd533ce1674a3cd2d1d6c983f
-    home: https://github.com/kubernetes/cloud-provider-vsphere
-    keywords:
-    - vSphere
-    - CPI
-    maintainers:
-    - email: maximilian.rink@telekom.de
-      name: Maximilian Rink
-    - email: myles@vmware.com
-      name: Myles Gray
-    name: vsphere-cpi
-    urls:
-    - https://github.com/MaxRink/helm-charts-1/releases/download/vsphere-cpi-1.5.0/vsphere-cpi-1.5.0.tgz
-    version: 1.5.0
   vsphere-csi:
   - apiVersion: v2
     appVersion: 3.0.2
-    created: "2023-11-27T23:25:22.862215302Z"
+    created: "2023-11-27T23:31:19.451057148Z"
     dependencies:
     - condition: snapshot.controller.enabled
       name: snapshot-controller
@@ -50,7 +23,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: A Helm chart for vSphere CSI Driver
-    digest: 840d350bd223be38c0d8d55de6ce34f6aaa2cf36bc4680c5c1eaad78482ca3ad
+    digest: e25cb7d67c51a66389f6bd497ead87d43812b9d7fd5ce79d05782d197a598fe0
     home: https://github.com/kubernetes-sigs/vsphere-csi-driver
     icon: https://raw.githubusercontent.com/kubernetes-sigs/vsphere-csi-driver/master/docs/images/vmware_logo.png
     keywords:
@@ -66,6 +39,6 @@ entries:
     sources:
     - https://github.com/kubernetes-sigs/vsphere-csi-driver
     urls:
-    - https://github.com/MaxRink/helm-charts-1/releases/download/vsphere-csi-3.2.3/vsphere-csi-3.2.3.tgz
-    version: 3.2.3
-generated: "2023-11-27T23:25:22.862225932Z"
+    - https://github.com/MaxRink/helm-charts-1/releases/download/vsphere-csi-3.2.4/vsphere-csi-3.2.4.tgz
+    version: 3.2.4
+generated: "2023-11-27T23:31:19.451067808Z"
