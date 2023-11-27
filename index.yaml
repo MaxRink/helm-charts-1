@@ -4,8 +4,8 @@ entries:
   - annotations:
       category: cpi
     apiVersion: v2
-    appVersion: v1.22.2
-    created: "2022-03-15T10:45:13.014781801Z"
+    appVersion: v1.25.1
+    created: "2023-11-27T23:25:22.620132234Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -13,7 +13,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: Helm chart for the vSphere-CPI
-    digest: 2abde9b5e014538eb40f44711bf91319bf3341d588ead4226018792869e07eae
+    digest: e0f6018daef7966c85910cb30ddf0b7cb986975bd533ce1674a3cd2d1d6c983f
     home: https://github.com/kubernetes/cloud-provider-vsphere
     keywords:
     - vSphere
@@ -25,13 +25,21 @@ entries:
       name: Myles Gray
     name: vsphere-cpi
     urls:
-    - https://github.com/MaxRink/helm-charts-1/releases/download/vsphere-cpi-1.2.0/vsphere-cpi-1.2.0.tgz
-    version: 1.2.0
+    - https://github.com/MaxRink/helm-charts-1/releases/download/vsphere-cpi-1.5.0/vsphere-cpi-1.5.0.tgz
+    version: 1.5.0
   vsphere-csi:
   - apiVersion: v2
-    appVersion: 2.4.1
-    created: "2022-03-15T10:45:13.283381362Z"
+    appVersion: 3.0.2
+    created: "2023-11-27T23:25:22.862215302Z"
     dependencies:
+    - condition: snapshot.controller.enabled
+      name: snapshot-controller
+      repository: https://piraeus.io/helm-charts/
+      version: 1.5.1
+    - condition: snapshot.validationWebhook.enabled
+      name: snapshot-validation-webhook
+      repository: https://piraeus.io/helm-charts/
+      version: 1.5.0
     - condition: vsphere-cpi.enabled
       name: vsphere-cpi
       repository: https://vsphere-tmm.github.io/helm-charts
@@ -42,7 +50,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: A Helm chart for vSphere CSI Driver
-    digest: 54f0384a02e22ff236d972b23c9680f097c98ec5b99c84dce2d772600fa7f366
+    digest: 840d350bd223be38c0d8d55de6ce34f6aaa2cf36bc4680c5c1eaad78482ca3ad
     home: https://github.com/kubernetes-sigs/vsphere-csi-driver
     icon: https://raw.githubusercontent.com/kubernetes-sigs/vsphere-csi-driver/master/docs/images/vmware_logo.png
     keywords:
@@ -58,6 +66,6 @@ entries:
     sources:
     - https://github.com/kubernetes-sigs/vsphere-csi-driver
     urls:
-    - https://github.com/MaxRink/helm-charts-1/releases/download/vsphere-csi-2.0.0/vsphere-csi-2.0.0.tgz
-    version: 2.0.0
-generated: "2022-03-15T10:45:13.283393462Z"
+    - https://github.com/MaxRink/helm-charts-1/releases/download/vsphere-csi-3.2.3/vsphere-csi-3.2.3.tgz
+    version: 3.2.3
+generated: "2023-11-27T23:25:22.862225932Z"
