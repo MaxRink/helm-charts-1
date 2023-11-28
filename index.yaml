@@ -2,8 +2,8 @@ apiVersion: v1
 entries:
   vsphere-csi:
   - apiVersion: v2
-    appVersion: 3.0.2
-    created: "2023-11-27T23:31:19.451057148Z"
+    appVersion: 3.1.2
+    created: "2023-11-28T00:11:47.865925001Z"
     dependencies:
     - condition: snapshot.controller.enabled
       name: snapshot-controller
@@ -23,7 +23,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: A Helm chart for vSphere CSI Driver
-    digest: e25cb7d67c51a66389f6bd497ead87d43812b9d7fd5ce79d05782d197a598fe0
+    digest: c13b9758944e16e9346bcec7c61748632a534b8962c6b5f6f0bced9b09cee61c
     home: https://github.com/kubernetes-sigs/vsphere-csi-driver
     icon: https://raw.githubusercontent.com/kubernetes-sigs/vsphere-csi-driver/master/docs/images/vmware_logo.png
     keywords:
@@ -39,6 +39,6 @@ entries:
     sources:
     - https://github.com/kubernetes-sigs/vsphere-csi-driver
     urls:
-    - https://github.com/MaxRink/helm-charts-1/releases/download/vsphere-csi-3.2.4/vsphere-csi-3.2.4.tgz
-    version: 3.2.4
-generated: "2023-11-27T23:31:19.451067808Z"
+    - https://github.com/MaxRink/helm-charts-1/releases/download/vsphere-csi-3.3.0/vsphere-csi-3.3.0.tgz
+    version: 3.3.0
+generated: "2023-11-28T00:11:47.865934279Z"
