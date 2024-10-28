@@ -1,9 +1,36 @@
 apiVersion: v1
 entries:
+  vsphere-cpi:
+  - annotations:
+      category: cpi
+    apiVersion: v2
+    appVersion: v1.28.0
+    created: "2024-10-28T16:29:54.814940855Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Helm chart for the vSphere-CPI
+    digest: 6be21b3cf9a2d8f1ba676226a40daa1645ed9aebcd1fd725d6d52ec3e80cf0ca
+    home: https://github.com/kubernetes/cloud-provider-vsphere
+    keywords:
+    - vSphere
+    - CPI
+    maintainers:
+    - email: maximilian.rink@telekom.de
+      name: Maximilian Rink
+    - email: myles@vmware.com
+      name: Myles Gray
+    name: vsphere-cpi
+    urls:
+    - https://github.com/MaxRink/helm-charts-1/releases/download/vsphere-cpi-1.6.0/vsphere-cpi-1.6.0.tgz
+    version: 1.6.0
   vsphere-csi:
   - apiVersion: v2
-    appVersion: 3.3.0
-    created: "2024-06-26T15:49:11.861215305Z"
+    appVersion: 3.3.1
+    created: "2024-10-28T16:29:55.037051712Z"
     dependencies:
     - condition: snapshot.controller.enabled
       name: snapshot-controller
@@ -23,7 +50,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: A Helm chart for vSphere CSI Driver
-    digest: cc9a957c3804f0781d566e32bcd7e2904d4d03a9936eb72d051506ebc38eb92d
+    digest: aaca4d3134f5a8c722efe4f240605bea94932a10d0360aee9ce9bdfbb4b95505
     home: https://github.com/kubernetes-sigs/vsphere-csi-driver
     icon: https://raw.githubusercontent.com/kubernetes-sigs/vsphere-csi-driver/master/docs/images/vmware_logo.png
     keywords:
@@ -39,6 +66,6 @@ entries:
     sources:
     - https://github.com/kubernetes-sigs/vsphere-csi-driver
     urls:
-    - https://github.com/MaxRink/helm-charts-1/releases/download/vsphere-csi-3.6.0/vsphere-csi-3.6.0.tgz
-    version: 3.6.0
-generated: "2024-06-26T15:49:11.86122335Z"
+    - https://github.com/MaxRink/helm-charts-1/releases/download/vsphere-csi-3.7.0/vsphere-csi-3.7.0.tgz
+    version: 3.7.0
+generated: "2024-10-28T16:29:55.037062613Z"
